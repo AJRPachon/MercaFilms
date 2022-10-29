@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "people")
 data class PeopleDbo(
 
-    @PrimaryKey(autoGenerate = false) val id: String?,
+    @PrimaryKey(autoGenerate = false) val id: String,
     val name: String?,
     val gender: String?,
     val age: String?,
