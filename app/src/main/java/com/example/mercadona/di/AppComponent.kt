@@ -7,12 +7,16 @@ import javax.inject.Singleton
 
 @Singleton
 @Component(
-    modules = []
+    modules = [
+        AppModule::class,
+        FilmRemoteModule::class,
+        FilmLocalModule::class
+    ]
 )
 interface AppComponent {
 
     @Component.Builder
-    interface Builder{
+    interface Builder {
 
         @BindsInstance
         fun application(application: AppApplication) : Builder
