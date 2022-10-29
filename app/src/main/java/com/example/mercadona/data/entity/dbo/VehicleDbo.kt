@@ -6,11 +6,12 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "vehicle")
 data class VehicleDbo(
 
-    @PrimaryKey(autoGenerate = false) val id: String,
+    @PrimaryKey(autoGenerate = false) val vehicleId: String,
     val name: String?,
     val description: String?,
     val vehicleClass: String?,
     val length: String?,
     val pilot: String?,
+    val filmVehicleId : String?,
     val url: String?
 )
