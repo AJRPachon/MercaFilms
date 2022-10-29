@@ -1,6 +1,10 @@
-package com.example.mercadona.di
+package com.example.mercadona.di.component
 
 import com.example.mercadona.AppApplication
+import com.example.mercadona.di.module.AppModule
+import com.example.mercadona.di.module.FilmLocalModule
+import com.example.mercadona.di.module.FilmRemoteModule
+import com.example.mercadona.di.module.NetworkModule
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
@@ -10,7 +14,8 @@ import javax.inject.Singleton
     modules = [
         AppModule::class,
         FilmRemoteModule::class,
-        FilmLocalModule::class
+        FilmLocalModule::class,
+        NetworkModule::class
     ]
 )
 interface AppComponent {

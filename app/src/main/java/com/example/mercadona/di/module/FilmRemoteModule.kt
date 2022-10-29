@@ -1,4 +1,4 @@
-package com.example.mercadona.di
+package com.example.mercadona.di.module
 
 import com.example.mercadona.data.remote.repository.FilmRemoteRepository
 import com.example.mercadona.data.remote.repository.FilmRemoteRepositoryImpl
