@@ -1,7 +1,7 @@
 package com.example.mercadona
 
 import android.app.Application
-import com.example.mercadona.di.DaggerAppComponent
+import com.example.mercadona.di.component.DaggerAppComponent
 
 open class AppApplication : Application() {
 

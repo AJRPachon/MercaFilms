@@ -1,4 +1,4 @@
-package com.example.mercadona.di
+package com.example.mercadona.di.module
 
 import android.content.Context
 import com.example.mercadona.AppApplication
