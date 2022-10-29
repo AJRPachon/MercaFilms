@@ -13,7 +13,7 @@ class NetworkModule{
 
     @Provides
     @Singleton
-    fun retrofitProvider(okHttpClient : OkHttpClient) =
+    fun retrofitProvider(okHttpClient : OkHttpClient): FilmWs =
         Retrofit.Builder()
             .client(okHttpClient)
             .baseUrl("https://ghibliapi.herokuapp.com")
