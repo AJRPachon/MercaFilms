@@ -10,6 +10,6 @@ import dagger.Provides
 class FilmRemoteModule {
 
     @Provides
-    fun filmRemoteRepository(local: FilmRemoteDataSource) =
-        FilmRemoteRepositoryImpl(local) as FilmRemoteRepository
+    fun filmRemoteRepository(remote: FilmRemoteDataSource) =
+        FilmRemoteRepositoryImpl(remote) as FilmRemoteRepository
 }
