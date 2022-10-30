@@ -15,11 +15,19 @@ class FilmViewModel @Inject constructor(
 
     fun requestFilmsWS() {
         viewModelScope.launch(Dispatchers.IO){
-            filmListLd.postValue(getFilmsUseCase.getFilms())
+            getFilmsUseCase.getFilms().collect{
+                filmListLd.postValue(it)
+            }
         }
     }
 
     fun getFilmsLD() : LiveData<List<FilmBo>> {
         return filmListLd
+    }
+
+    fun deleteFilm(filmId: String){
+        viewModelScope.launch(Dispatchers.IO){
+            getFilmsUseCase.deleteFilm(filmId)
+        }
     }
 }

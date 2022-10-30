@@ -2,8 +2,6 @@ package com.example.mercadona.di.component
 
 import com.example.mercadona.AppApplication
 import com.example.mercadona.di.module.*
-import com.example.mercadona.ui.fragments.FilmsFragment
-import com.example.mercadona.ui.viewmodel.FilmViewModel
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
@@ -14,6 +12,7 @@ import javax.inject.Singleton
         AppModule::class,
         FilmRemoteModule::class,
         FilmLocalModule::class,
+        FilmBaseModule::class,
         NetworkModule::class,
         ViewModelModule::class
     ]

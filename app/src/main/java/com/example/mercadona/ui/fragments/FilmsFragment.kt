@@ -29,7 +29,7 @@ class FilmsFragment : Fragment() {
                 }
 
                 override fun onDeleteClicked(filmId: String) {
-                    //viewModel.deleteFilmSelected(filmId)
+                    //viewModel.deleteFilm(filmId)
                 }
             }
         )

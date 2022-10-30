@@ -1,10 +1,7 @@
 package com.example.mercadona.data.local.dao
 
-import androidx.room.Dao
-import androidx.room.Insert
+import androidx.room.*
 import androidx.room.OnConflictStrategy.IGNORE
-import androidx.room.Query
-import androidx.room.Transaction
 import com.example.mercadona.data.entity.dbo.*
 import com.example.mercadona.data.entity.dbo.relation.FilmWithData
 import kotlinx.coroutines.flow.Flow
@@ -17,6 +14,10 @@ interface FilmDao {
     @Transaction
     @Query("SELECT * FROM film")
     fun getFilmList() : Flow<List<FilmWithData>>
+
+    @Transaction
+    @Query("SELECT * FROM film WHERE filmId =:filmId")
+    fun getFilm(filmId : String) : Flow<FilmWithData>
 
 
     ////////// INSERT ///////////////////////////////////////////////////////////////////////////
@@ -32,8 +33,11 @@ interface FilmDao {
     )
 
     //////// UPDATE ////////////////////////////////////////////////////////////////////////////
-    //TODO UPDATE DAO
+    @Update
+    fun updateFilm(film: FilmDbo)
 
     /////// DELETE /////////////////////////////////////////////////////////////////////////////
-    //TODO DELETE DAO
+    @Transaction
+    @Query("DELETE FROM film WHERE filmId = :filmId")
+    fun deleteSelectedFilm(filmId: String)
 }
