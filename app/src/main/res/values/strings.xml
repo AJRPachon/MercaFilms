@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">Mercadona</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="empty_string">none</string>
+    <string name="fil_row__lbl__title">Título:</string>
+    <string name="fil_row__lbl__director">Director:</string>
+    <string name="fil_row__lbl__rtScore">RT Score:</string>
+    <string name="film_detail__lbl__description">Descripcción</string>
+    <string name="film_detail__lbl__people">Reparto:</string>
+    <string name="film_detail__lbl__release_date">Año:</string>
+    <string name="film_detail__lbl__running_time">Duración:</string>
+    <string name="film_detail__btn__save">Guardar</string>
 </resources>
