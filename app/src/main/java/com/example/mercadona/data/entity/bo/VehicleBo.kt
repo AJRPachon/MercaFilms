@@ -1,7 +1,5 @@
 package com.example.mercadona.data.entity.bo
 
-import com.example.mercadona.data.entity.dto.FilmDto
-
 data class VehicleBo(
 
     val id: String?,
@@ -10,6 +8,6 @@ data class VehicleBo(
     val vehicleClass: String?,
     val length: String?,
     val pilot: String?,
-    val films: List<FilmDto>,
+    val films: List<FilmBo>,
     val url: String?
 )

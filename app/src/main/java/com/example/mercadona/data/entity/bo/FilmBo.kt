@@ -1,10 +1,5 @@
 package com.example.mercadona.data.entity.bo
 
-import com.example.mercadona.data.entity.dto.LocationDto
-import com.example.mercadona.data.entity.dto.PeopleDto
-import com.example.mercadona.data.entity.dto.SpecieDto
-import com.example.mercadona.data.entity.dto.VehicleDto
-
 data class FilmBo (
 
     val id: String?,
@@ -19,9 +14,9 @@ data class FilmBo (
     val releaseDate: String?,
     val runningTime: String?,
     val rtScore: String?,
-    val people: List<PeopleDto>,
-    val species: List<SpecieDto>,
-    val locations: List<LocationDto>,
-    val vehicles: List<VehicleDto>,
+    val people: List<PeopleBo>,
+    val species: List<SpecieBo>,
+    val locations: List<LocationBo>,
+    val vehicles: List<VehicleBo>,
     val url: String?
 )

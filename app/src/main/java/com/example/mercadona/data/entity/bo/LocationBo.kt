@@ -1,8 +1,5 @@
 package com.example.mercadona.data.entity.bo
 
-import com.example.mercadona.data.entity.dto.FilmDto
-import com.example.mercadona.data.entity.dto.PeopleDto
-
 data class LocationBo(
 
     val id: String?,
@@ -10,7 +7,7 @@ data class LocationBo(
     val climate: String?,
     val terrain: String?,
     val surfaceWater: String?,
-    val residents: List<PeopleDto>,
-    val films: List<FilmDto>,
+    val residents: List<PeopleBo>,
+    val films: List<FilmBo>,
     val url: String?
 )
