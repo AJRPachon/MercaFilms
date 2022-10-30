@@ -1,5 +1,6 @@
 package com.example.mercadona.data.repository
 
+import com.example.mercadona.data.remote.datasource.FilmRemoteDataSource
 import javax.inject.Inject
 
 class FilmBaseRepository @Inject constructor(
@@ -9,9 +10,6 @@ class FilmBaseRepository @Inject constructor(
 
 }
 
-
-interface FilmRemoteDataSource {
-}
 
 interface FilmLocalDataSource {
 }
