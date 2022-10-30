@@ -1,10 +1,12 @@
 package com.example.mercadona.di.module
 
+import com.example.mercadona.data.local.repository.FilmLocalRepository
 import com.example.mercadona.data.remote.datasource.FilmRemoteDataSource
 import com.example.mercadona.data.remote.datasource.FilmRemoteDataSourceImpl
 import com.example.mercadona.data.remote.repository.FilmRemoteRepository
 import com.example.mercadona.data.remote.repository.FilmRemoteRepositoryImpl
 import com.example.mercadona.data.remote.ws.FilmWs
+import com.example.mercadona.data.repository.FilmBaseRepository
 import com.example.mercadona.domain.GetFilmsUseCase
 import com.example.mercadona.domain.GetFilmsUseCaseImpl
 import dagger.Module
@@ -22,6 +24,6 @@ class FilmRemoteModule {
         FilmRemoteDataSourceImpl(filmWs) as FilmRemoteDataSource
 
     @Provides
-    fun getFilmsUseCase(filmRemoteRepository: FilmRemoteRepository) =
-        GetFilmsUseCaseImpl(filmRemoteRepository) as GetFilmsUseCase
+    fun getFilmsUseCase(filmLocalRepository: FilmLocalRepository, baseRepository: FilmBaseRepository) =
+        GetFilmsUseCaseImpl(filmLocalRepository, baseRepository) as GetFilmsUseCase
 }
