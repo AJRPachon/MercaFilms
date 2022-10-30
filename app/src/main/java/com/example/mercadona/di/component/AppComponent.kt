@@ -1,10 +1,9 @@
 package com.example.mercadona.di.component
 
 import com.example.mercadona.AppApplication
-import com.example.mercadona.di.module.AppModule
-import com.example.mercadona.di.module.FilmLocalModule
-import com.example.mercadona.di.module.FilmRemoteModule
-import com.example.mercadona.di.module.NetworkModule
+import com.example.mercadona.di.module.*
+import com.example.mercadona.ui.fragments.FilmsFragment
+import com.example.mercadona.ui.viewmodel.FilmViewModel
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
@@ -15,7 +14,8 @@ import javax.inject.Singleton
         AppModule::class,
         FilmRemoteModule::class,
         FilmLocalModule::class,
-        NetworkModule::class
+        NetworkModule::class,
+        ViewModelModule::class
     ]
 )
 interface AppComponent {
@@ -24,9 +24,9 @@ interface AppComponent {
     interface Builder {
 
         @BindsInstance
-        fun application(application: AppApplication) : Builder
+        fun application(application: AppApplication): Builder
         fun build(): AppComponent
     }
 
-    fun inject(app : AppApplication)
+    fun inject(app: AppApplication)
 }
